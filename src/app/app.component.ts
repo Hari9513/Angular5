@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  first:string
+  second:string
+  third:string
+
+  orange(){
+  this.first = 'Orange';
+  }
+  blue(){
+  this.second = 'Blue';
+  }
+  green(){
+  this.third = 'Green';
+  }
+
 }
