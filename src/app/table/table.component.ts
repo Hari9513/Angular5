@@ -1,42 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-my-component',
-  templateUrl: './my-component.component.html',
-  styleUrls: ['./my-component.component.css']
+selector: 'app-table',
+templateUrl: './table.component.html',
+styleUrls: ['./table.component.css']
 })
-export class MyComponentComponent implements OnInit {
-first:string
-second:string
-third:string
+export class TableComponent implements OnInit {
+isShow:boolean
+constructor() { }
 
-  constructor() { }
-
-  ngOnInit() {
-  this.isShow = true;
-  }
-orange(){
-if(this.first === 'Orange'){
-this.first = null;
-return;
+ngOnInit() {
+this.isShow = true;
 }
-this.first = 'Orange';
-}
-blue(){
-if(this.second === 'Blue'){
-this.second = null;
-return;
-}
-this.second = 'Blue';
-}
-green(){
-if(this.third === 'Green'){
-this.third = null;
-return;
-}
-this.third = 'Green';
-}
-
 flightDetails = [
 {
 "name": "Jet Airways",
@@ -118,13 +93,12 @@ flightDetails = [
 ];
 
 onClick(){
-	if(this.isShow == true){
+	if(this.isShow === true){
 	this.isShow = false;
 	return;
 	}
 
 	this.isShow = true;
-	
 }
 
-};
+}

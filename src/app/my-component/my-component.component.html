@@ -1,43 +1,17 @@
-<div class="container">
-	<div class="row form-group">
-		<div class="col-sm-2 form-control" style="background-color: orange;height: 50px" (click)="orange()">
-		</div>
-		<div class="col-sm-1">
-			<h4>{{first}}</h4>
-		</div>
-		<div class="col-sm-2 form-control" style="background-color: blue;height: 50px" (click)="blue()">
-		</div>
-		<div class="col-sm-1">
-			<h4>{{second}}</h4>
-		</div>
-		<div class="col-sm-2 form-control" style="background-color: green;height: 50px" (click)="green()">
-		</div>
-		<div class="col-sm-1">
-			<h4>{{third}}</h4>
-		</div>
-	</div>
-	<div class="form-group">
-		<button class="btn btn-primary" (click)="onClick()">Table Toggle</button>
-	</div>
-	<div *ngIf="isShow" class="table-responsive">
-		<table class="table table-striped">
-			<tr>
-				<th>S.No</th>
-				<th>Flight Name</th>
-				<th>Depature Time</th>
-				<th>Arrival Time</th>
-			</tr>
-			<tbody>
-				<tr *ngFor="let flight of flightDetails" [ngClass]="flight.id === '1'">
-					<td>{{flight.id}}</td>
-					<td>{{flight.name}}</td>
-					<td>{{flight.departureTime | date:'dd-MM-yyyy hh:mm a'}}</td>
-					<td>{{flight.arrivalTime | date:'dd-MM-yyyy hh:mm a'}}</td>
-				</tr>
-				<tr *ngIf="flightDetails.length<=0">
-					<td colspan="15">No Data</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/colorBoxes">Color Boxes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/table">Table</a>
+      </li>
+    </ul>
+  </div>
+</nav>
