@@ -11,10 +11,10 @@ import { TableComponent } from './table/table.component';
 const routes: Routes = [
 {
   path: 'colorBoxes',
-  component: ColorBoxesComponent
+  component: MyComponentComponent
 },
 {
-  path: 'table',
+  path: 'flightDetails',
   component: TableComponent
 },
 {
