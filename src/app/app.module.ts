@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { ColorBoxesComponent } from './color-boxes/color-boxes.component';
 import { TableComponent } from './table/table.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
 {
@@ -16,6 +18,10 @@ const routes: Routes = [
 {
   path: 'flightDetails',
   component: TableComponent
+},
+{
+  path: 'form',
+  component: FormComponent
 },
 {
   path: '**',
@@ -30,10 +36,12 @@ const routes: Routes = [
     AppComponent,
     MyComponentComponent,
     ColorBoxesComponent,
-    TableComponent
+    TableComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
