@@ -2,19 +2,8 @@
 		<div class="col-sm-5"></div>
 		<div class="col-sm-6">
 			
-			<div class="colorBox" (click)="isShow = !isShow" [ngStyle]="{'backgroundColor': color}">
-				<b [hidden]="!isShow">{{color}}</b>
+			<div class="colorBox" (click)="isShow = !isShow" [ngStyle]="{'backgroundColor': mycolor}">
+				<b [hidden]="!isShow">{{mycolor}}</b>
 			</div>
 		</div>
-
-		<!-- <div class="form-control" color="orange" style="background-color: orange;height: 150px;width: 200px" (click)="orange()">
-				<h4>{{first}}</h4>
-			</div>
-			<div class="form-control" color="blue" style="background-color: blue;height: 150px;width: 200px" (click)="blue()">
-				<h4>{{second}}</h4>
-			</div>
-			<div class="form-control" color="green" style="background-color: green;height: 150px;width: 200px" (click)="green()">
-				<h4>{{third}}</h4>
-			</div>
-		</div> -->
 

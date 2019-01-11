@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SubjectService } from '../subject.service';
 
 @Component({
 	selector: 'app-table',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 	isShow:boolean
-	constructor() { }
+	userName;
+	updatedUserName;
+	constructor(
+		private subjectService : SubjectService
+	) { 
+		this.getUserName();
+		this.updateName();
+	}
 
 	ngOnInit() {
 		this.isShow = true;
@@ -91,6 +99,16 @@ export class TableComponent implements OnInit {
 		"arrivalTime": "2018-04-11T02:58:13.768Z"
 	}
 	];
+
+	getUserName(){
+    this.subjectService.userName$.subscribe(value => {
+      this.updatedUserName = value;
+    })
+  }
+
+	updateName() {
+		this.subjectService.updateUserName(this.userName);
+	}
 
 	onClick(){
 		if(this.isShow === true){

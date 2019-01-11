@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ColorBoxesComponent implements OnInit {
 
-	@Input() color;
+	@Input('mycolor') mycolor;
 
 	// first:string
 	// second:string

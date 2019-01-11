@@ -9,6 +9,7 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { ColorBoxesComponent } from './color-boxes/color-boxes.component';
 import { TableComponent } from './table/table.component';
 import { FormComponent } from './form/form.component';
+import { SubjectService } from './subject.service';
 
 const routes: Routes = [
 {
@@ -44,7 +45,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [SubjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,10 @@
-<app-color-boxes color="red"></app-color-boxes>
-<app-color-boxes color="blue"></app-color-boxes>
-<app-color-boxes color="green"></app-color-boxes>
+<!-- <app-color-boxes mycolor="red"></app-color-boxes>
+<app-color-boxes mycolor="blue"></app-color-boxes>
+<app-color-boxes mycolor="green"></app-color-boxes> -->
+
+<div>
+	<input type="text" [(ngModel)]="myName">
+	<button (click)="updateName()">Update</button>
+</div>
+
+<p>From my component&nbsp;&nbsp;&nbsp;&nbsp;{{myUpdatedName}}</p>
